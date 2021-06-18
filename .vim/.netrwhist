@@ -1,4 +1,12 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhistcnt =2
-let g:netrw_dirhist_2='/home/petiole/Documents/projects/websites/e-seng.github.io/css'
-let g:netrw_dirhist_1='/home/petiole/Documents/projects/websites/e-seng.github.io'
+let g:netrw_dirhistcnt =4
+let g:netrw_dirhist_4='/home/petiole/Documents/projects/bcharity/nft/nft-frontend/src'
+let g:netrw_dirhist_3='/home/petiole/Documents/projects/bcharity/nft/nft-frontend'
+let g:netrw_dirhist_2='/home/petiole/Documents/projects/bcharity/nft/nft-frontend/src'
+let g:netrw_dirhist_1='/home/petiole/Documents/projects/bcharity/nft/nft-frontend'
+let g:netrw_dirhist_0='/home/petiole/Documents/projects/bcharity/nft/nft-frontend/public'
+let g:netrw_dirhist_9='/home/petiole/Documents/projects/bcharity/nft/nft-frontend'
+let g:netrw_dirhist_8='/home/petiole/Documents/projects/bcharity/nft/nft-frontend/src'
+let g:netrw_dirhist_7='/home/petiole/Documents/projects/bcharity/nft/nft-frontend/src/compound'
+let g:netrw_dirhist_6='/home/petiole/Documents/projects/bcharity/nft/nft-frontend/src/compound/common'
+let g:netrw_dirhist_5='/home/petiole/Documents/projects/bcharity/nft/nft-frontend/src/compound'
