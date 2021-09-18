@@ -1,2 +1,2 @@
 # Ignore some potentially sensitive generated files
-.vim/.netrwhist
+.netrwhist
