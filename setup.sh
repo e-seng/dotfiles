@@ -43,7 +43,7 @@ if test -f ~/.zshrc; then
 fi
 
 ln -s ~/.dotfiles/.vimrc ~
-ln -s ~/.bashrc ~
+ln -s ~/.dotfiles/.bashrc ~
 echo "done"
 
 # conditionals:
