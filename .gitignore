@@ -1,2 +1,3 @@
 # Ignore some potentially sensitive generated files
 .netrwhist
+*id_*
