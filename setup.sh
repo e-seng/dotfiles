@@ -52,6 +52,7 @@ fi
 
 ln -s ~/.dotfiles/.vimrc ~
 ln -s ~/.dotfiles/.bashrc ~
+ln -s ~/.dotfiles/.gitconfig ~
 echo "done"
 
 # conditionals:
