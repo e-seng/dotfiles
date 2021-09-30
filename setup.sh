@@ -24,3 +24,11 @@ ln -s ~/.dotfiles/.dir_colors ~
 ln -s ~/.dotfiles/.zshrc ~
 ln -s ~/.dotfiles/.vimrc ~
 ln -s ~/bash
+
+# conditionals:
+if test -d ~/.ssh;then
+  echo "~/.ssh found, skipping..."
+else
+  mkdir ~/.ssh/
+  ln -s ~/.dotfiles/.ssh/config ~/.ssh
+fi
