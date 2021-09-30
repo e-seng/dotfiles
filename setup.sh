@@ -11,13 +11,12 @@ fi
 
 # backup previous dot files in case i mess something up
 if test -d ~/.backup; then
+  echo "~/.backup found"
+else
   echo -n "backing-up existing dot files into ~/.backup... "
   mkdir ~/.backup
   mv ~/.* ~/.backup
   echo "done"
-else
-  echo "~/.backup found"
-  rm -rf ~/.*
 fi
 
 # rename default folder
