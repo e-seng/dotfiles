@@ -74,3 +74,5 @@ else
   mkdir ~/.vim
 fi
 echo "done"
+
+chsh -s $(which zsh)
