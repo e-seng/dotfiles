@@ -26,14 +26,6 @@ if test -d ~/dotfiles; then
 fi
 echo "done"
 
-# install zsh stuff
-# echo "installing zsh..."
-# if test -d ~/.oh-my-zsh; then
-#   rm -rf ~/.oh-my-zsh
-# fi
-# sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-# echo "done"
-
 # ~~~ .config ~~~
 # setup .config/
 echo "creating ~/.config";
