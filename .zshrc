@@ -107,9 +107,11 @@ unsetopt BEEP
 # alias ~~="/mnt/c/Users/ESeng/"
 
 # let WSL open the file explorer
-export BROWSER='/mnt/c/Windows/explorer.exe'
-alias see='ranger' # use ranger for see
-alias open='explorer.exe .; return 0;' # open file dir
+if grep -qEi "(Microsoft|WSL)" /proc/version &> /dev/null ; then
+  export BROWSER='/mnt/c/Windows/explorer.exe'
+  alias see='ranger' # use ranger for see
+  alias open='explorer.exe .; return 0;' # open file dir
+fi
 
 # set the home directory in windows
 export WIN_HOME='/mnt/c/Users/ESeng'
