@@ -7,7 +7,7 @@
 # backup previous dot files in case i mess something up
 echo -n "backing-up existing dot files into ~/.backup... "
 mkdir ~/.backup
-mv ~/.* .backup
+mv ~/.* ~/.backup
 echo "done"
 
 # rename default folder
