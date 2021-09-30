@@ -10,10 +10,15 @@ if test -d ~/.dotfiles; then
 fi
 
 # backup previous dot files in case i mess something up
-echo -n "backing-up existing dot files into ~/.backup... "
-mkdir ~/.backup
-mv ~/.* ~/.backup
-echo "done"
+if test -d ~/.backup; then
+  echo -n "backing-up existing dot files into ~/.backup... "
+  mkdir ~/.backup
+  mv ~/.* ~/.backup
+  echo "done"
+else
+  echo "~/.backup found"
+  rm -rf ~/.*
+fi
 
 # rename default folder
 echo -n "Renaming dotfiles repository folder"
