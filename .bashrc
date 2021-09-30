@@ -137,8 +137,8 @@ ex ()
     echo "'$1' is not a valid file"
   fi
 }
-if which nvm; then
+if test -d /usr/share/nvm/; then
   source /usr/share/nvm/init-nvm.sh
-  export VISUAL vim
-  export EDITOR vim
 fi
+export VISUAL nvim
+export EDITOR nvim
