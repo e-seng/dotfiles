@@ -15,7 +15,7 @@ if test -d ~/.backup; then
 else
   echo -n "backing-up existing dot files into ~/.backup... "
   mkdir ~/backup
-  mv $(find ~ -maxdepth 1 | grep "$HOME/\.") ~/backup
+  mv $(find ~ -maxdepth 1 | grep "$HOME/\." | grep -v 'ssh') ~/backup
   echo "done"
   mv ~/backup ~/.backup
 fi
