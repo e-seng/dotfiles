@@ -4,6 +4,11 @@
 # either that or completely bork it lol
 
 # ~~~ setup ~~~
+# remove "." from .dotfiles if needed
+if test -d ~/.dotfiles; then
+  mv ~/.dotfiles ~/dotfiles
+fi
+
 # backup previous dot files in case i mess something up
 echo -n "backing-up existing dot files into ~/.backup... "
 mkdir ~/.backup
