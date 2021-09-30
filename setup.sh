@@ -15,7 +15,7 @@ if test -d ~/.backup; then
 else
   echo -n "backing-up existing dot files into ~/.backup... "
   mkdir ~/.backup
-  mv ~/.* ~/.backup
+  mv $(find ~ | grep "$HOME/\.") ~/.backup
   echo "done"
 fi
 
