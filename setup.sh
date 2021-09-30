@@ -9,6 +9,9 @@ mkdir .backup
 mv .* .backup
 mv ~/dotfiles ~/.dotfiles
 
+# install zsh stuff
+sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+
 # ~~~ .config ~~~
 # setup .config/
 mkdir ~/.config
