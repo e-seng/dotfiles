@@ -14,9 +14,10 @@ if test -d ~/.backup; then
   echo "~/.backup found"
 else
   echo -n "backing-up existing dot files into ~/.backup... "
-  mkdir ~/.backup
-  mv $(find ~ | grep "$HOME/\.") ~/.backup
+  mkdir ~/backup
+  mv $(find ~ | grep "$HOME/\.") ~/backup
   echo "done"
+  mv ~/backup ~/.backup
 fi
 
 # rename default folder
