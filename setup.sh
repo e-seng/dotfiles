@@ -70,4 +70,6 @@ else
 fi
 echo "done"
 
-chsh -s $(which zsh)
+echo -n "Change the default shell: "
+sudo chsh -s $(which zsh)
+echo "";
