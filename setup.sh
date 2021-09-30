@@ -42,10 +42,10 @@ ln -s ~/.dotfiles/.dir_colors ~
 
 # replace default .zshrc
 if test -f ~/.zshrc; then
-else
   rm ~/.zshrc
-  ln -s ~/.dotfiles/.zshrc ~
 fi
+
+ln -s ~/.dotfiles/.zshrc ~
 
 ln -s ~/.dotfiles/.oh-my-zsh ~
 
