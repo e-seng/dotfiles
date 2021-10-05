@@ -118,7 +118,7 @@ export WIN_HOME='/mnt/c/Users/ESeng'
 
 # set nvm stuff
 export NVM_HOME="$HOME/.nvm"
-export PATH=${PATH}:${NVM_HOME}
-if test -d NVM_HOME; then
+if test -d $NVM_HOME ; then
+  export PATH=${PATH}:${NVM_HOME}
   source ${NVM_HOME}/nvm.sh
 fi
