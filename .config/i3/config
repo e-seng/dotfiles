@@ -178,3 +178,6 @@ bindsym XF86AudioPrev exec playerctl previous
 
 # remove title bar
 for_window [class=".*"] border pixel
+
+# run polybar
+exec_always --no-startup-id $HOME/.config/polybar/launch.sh
