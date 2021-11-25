@@ -18,7 +18,7 @@
 
 [colors]
 ;background = ${xrdb:color0:#222}
-background = #222
+background = #00
 background-alt = #444
 ;foreground = ${xrdb:color7:#222}
 foreground = #dfdfdf
@@ -29,6 +29,26 @@ alert = #bd2c40
 
 [bar/top]
 ;monitor = ${env:MONITOR:HDMI-1}
+bottom = false
+
+font-0 = fixed:pixelsize=10;1
+font-1 = unifont:fontformat=truetype:size=8:antialias=false;0
+font-2 = siji:pixelsize=10;1
+
+border-size = 0
+
+padding-right = 2
+padding-left = 2
+
+module-margin-left = 2
+module-margin-right = 2
+
+background = ${colors.background}
+
+modules-left = i3
+module-right = date
+
+wm-restack = i3
 
 [bar/example]
 ;monitor = ${env:MONITOR:HDMI-1}
