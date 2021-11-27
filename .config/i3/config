@@ -1,6 +1,6 @@
 # Set modifier key to alt
-set $mod Mod4
-set $alt Mod1
+set $mod Mod1
+set $sup Mod4
 
 # Set display resolution
 exec_always --no-startup-id xrandr --output DP1-8 --mode 2560x1440 --rate 59.95
@@ -18,8 +18,8 @@ bindsym $mod+Shift+q kill
 
 # Open dmenu 
 bindsym $mod+d exec dmenu_run -fn 'Overpass Mono:pixelsize=15' -l 3 -nf '#707880' -sf '#cc6666' -nb '#1d1f21' -sb '#1d1f21'
-# alternatively, use $alt+Spaace
-bindsym $alt+space exec dmenu_run -fn 'Overpass Mono:pixelsize=15' -l 3 -nf '#707880' -sf '#cc6666' -nb '#1d1f21' -sb '#1d1f21'
+# alternatively, use $sup+Spaace
+bindsym $sup+space exec dmenu_run -fn 'Overpass Mono:pixelsize=15' -l 3 -nf '#707880' -sf '#cc6666' -nb '#1d1f21' -sb '#1d1f21'
 
 # Change focus
 bindsym $mod+j focus left
