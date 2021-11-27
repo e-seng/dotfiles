@@ -44,8 +44,8 @@ module-margin-right = 2
 
 background = ${colors.background}
 
-modules-left = i3
-modules-right = battery backlight wlan date powermenu
+modules-left = powermenu i3
+modules-right = battery backlight wlan date
 
 wm-restack = i3
 
