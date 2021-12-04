@@ -121,4 +121,5 @@ export NVM_HOME="$HOME/.nvm"
 if test -d $NVM_HOME ; then
   export PATH=${PATH}:${NVM_HOME}
   source ${NVM_HOME}/nvm.sh
+  [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 fi
