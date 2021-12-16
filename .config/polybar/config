@@ -33,7 +33,6 @@ bottom = false
 
 font-0 = Cozette:size=10;0
 font-1 = Siji:style=Regular;1
-font-2 = Material Icons Sharp: style=Regular: pixelsize=10;2
 
 border-size = 0
 
@@ -409,9 +408,9 @@ expand-right = true
 
 format-spacing = 1
 
-label-open = 
+label-open = 
 label-open-foreground = ${colors.secondary}
-label-close =  cancel
+label-close =  cancel
 label-close-foreground = ${colors.secondary}
 label-separator = |
 label-separator-foreground = ${colors.foreground-alt}
