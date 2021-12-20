@@ -182,3 +182,6 @@ bindsym XF86AudioPrev exec playerctl previous
 # configure gaps between windows
 gaps inner 5
 gaps outer 10
+
+# Move workspace between screens is possible
+bindsym $mod+p move workspace to output left
