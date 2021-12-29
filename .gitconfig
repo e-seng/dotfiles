@@ -1,3 +1,5 @@
 [user]
 	email = eth.sengsavang@gmail.com
 	name = e-seng
+[core]
+	editor = nvim
