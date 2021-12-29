@@ -137,6 +137,11 @@ ex ()
     echo "'$1' is not a valid file"
   fi
 }
+
+if type wal; then
+  (cat ~/.cache/wal/sequences &)
+fi
+
 if test -d /usr/share/nvm/; then
   source /usr/share/nvm/init-nvm.sh
 fi
