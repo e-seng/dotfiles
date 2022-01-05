@@ -1,0 +1,48 @@
+! load every font needed
+*.font:\
+  xft:Cozette:style=Medium:size=10,\
+  -*-Siji-*-*-*-*-*-*-*-*-*-*-*-*, \
+  -*-Unifont-*-*-*-*-*-*-*-*-*-*-*-*
+
+URxvt.italicFont:\
+  xft:Victor Mono:style=Italic:size=10,\
+
+URxvt.boldFont:\
+  xft:Victor Mono:style=Bold:size=9,\
+  xft:Cozette:style=Medium:size=10,\
+
+URxvt.boldItalicFont:\
+  xft:Victor Mono:style=Bold Italic:size=9,\
+
+Xft.dpi:                        96
+Xft.antialias:                  1
+Xft.autohint:                   1
+Xft.hinting:                    1
+Xft.hintstyle:                  hintslight
+Xft.lcdfilter:                  lcdlight
+Xft.rgba:                       rgb
+
+URxvt*termName:                 rxvt-256color
+URxvt.depth:                    32
+URxvt*lineSpace:                1
+! URxvt.letterSpace:              -1
+URxvt.iso14755:                 false
+URxvt.iso14755_52:              false
+URxvt*geometry:                 65x17
+URxvt.scrollBar:                false
+URxvt*loginShell:               true
+URxvt.internalBorder:           25
+URxvt.perl-ext:	 		default,matcher
+URxvt.perl-ext-common:  resize-font
+URxvt.url-launcher:             firefox
+URxvt.matcher.button: 		1
+
+! scrolling the terminal
+URxvt.keysym.Shift-Up: command:\033]720;1\007
+URxvt.keysym.Shift-Down: command:\033]721;1\007
+
+! word jumping w/ ctrl + arrow keys
+URxvt.keysym.Control-Up: \033[1;5A
+URxvt.keysym.Control-Down: \033[1;5B
+URxvt.keysym.Control-Right: \033[1;5C
+URxvt.keysym.Control-Left: \033[1;5D
