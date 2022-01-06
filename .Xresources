@@ -5,11 +5,12 @@
   -*-Unifont-*-*-*-*-*-*-*-*-*-*-*-*
 
 URxvt.italicFont:\
+  xft:Cozette:style=Medium:size=10,\
   xft:Victor Mono:style=Italic:size=10,\
 
 URxvt.boldFont:\
-  xft:Victor Mono:style=Bold:size=9,\
   xft:Cozette:style=Medium:size=10,\
+  xft:Victor Mono:style=Bold:size=9,\
 
 URxvt.boldItalicFont:\
   xft:Victor Mono:style=Bold Italic:size=9,\
