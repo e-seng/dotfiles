@@ -1,5 +1,7 @@
 # Set modifier key to alt
+# alt key
 set $mod Mod1
+# win key
 set $sup Mod4
 
 # Set display resolution
