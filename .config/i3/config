@@ -187,3 +187,6 @@ gaps outer 10
 
 # Move workspace between screens is possible
 bindsym $mod+p move workspace to output left
+
+# Enable screenshot
+bindsym $sup+Shift+s exec flameshot gui
