@@ -1,16 +1,19 @@
 ! load every font needed
 *.font:\
-  xft:Cozette:style=Medium:size=10,\
+  xft:Victor Mono:style=Regular:size=10, \
   -*-Siji-*-*-*-*-*-*-*-*-*-*-*-*, \
   -*-Unifont-*-*-*-*-*-*-*-*-*-*-*-*
 
+! xft:Cozette:style=Medium:size=10,\
+! xft:Space Mono:style=Regular, \
+
 URxvt.italicFont:\
-  xft:Cozette:style=Medium:size=10,\
   xft:Victor Mono:style=Italic:size=10,\
+  xft:Cozette:style=Medium:size=10,\
 
 URxvt.boldFont:\
+  xft:Victor Mono:style=Bold:size=10,\
   xft:Cozette:style=Medium:size=10,\
-  xft:Victor Mono:style=Bold:size=9,\
 
 URxvt.boldItalicFont:\
   xft:Victor Mono:style=Bold Italic:size=9,\
