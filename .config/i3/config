@@ -179,7 +179,7 @@ bindsym XF86AudioNext exec playerctl next
 bindsym XF86AudioPrev exec playerctl previous
 
 # remove title bar
-# for_window [class=".*"] border pixel
+for_window [class=".*"] border pixel
 
 # configure gaps between windows
 gaps inner 5
