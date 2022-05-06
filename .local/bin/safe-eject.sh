@@ -30,7 +30,7 @@ then
   echo "[info] stopping $WD" # properly stop the heads and cylinders
   sudo sdparm --command=stop $WD
   echo "[info] powering off $WD" # properly power off device before ejecting
-  udisksctl power-off -b /dev/sdc1
+  udisksctl power-off -b $WD
   echo "[done] device $WD is now safe to eject";
   exit 0
 fi
