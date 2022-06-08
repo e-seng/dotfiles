@@ -145,14 +145,31 @@ hide_edge_borders vertical
 set $unfocused_border #778877
 set $focused_border #88aa88
 
-# class                 border  backgr. text    indicator child_border
-client.focused          #ffffff #ffffff #ffffff #ffffff   $focused_border
-client.focused_inactive #ffffff #ffffff #ffffff #ffffff   $focused_border
-client.unfocused        #ffffff #ffffff #ffffff #ffffff   $unfocused_border
-client.urgent           #ffffff #ffffff #ffffff #ffffff   $focused_border
-client.placeholder      #ffffff #ffffff #ffffff #ffffff   #ffffff
+# using pywal colours as well
+set_from_resource $fg i3wm.color7
+set_from_resource $bg i3wm.color0
+set_from_resource $fg_uf i3wm.color2
+set_from_resource $fg_ug i3wm.color2
 
-client.background       #ffffff
+# set i3 font
+font Cozette:size=10
+
+# class                 border  backgr. text    indicator child_border
+client.focused          $bg     $bg     $fg     $bg       $bg
+client.focused_inactive $bg     $bg     $fg_uf  $bg       $bg
+client.unfocused        $bg     $bg     $fg_uf  $bg       $bg
+client.urgent           $bg     $bg     $fg_ug  $bg       $bg
+client.placeholder      $bg     $bg     $fg     $bg       $bg
+
+client.background       $bg
+
+# client.focused          #ffffff #ffffff #000000 #ffffff   $focused_border
+# client.focused_inactive #ffffff #ffffff #ffffff #ffffff   $focused_border
+# client.unfocused        #ffffff #ffffff #ffffff #ffffff   $unfocused_border
+# client.urgent           #ffffff #ffffff #ffffff #ffffff   $focused_border
+# client.placeholder      #ffffff #ffffff #ffffff #ffffff   #ffffff
+#
+# client.background       #ffffff
 
 # Apply .Xresource. As far as I know, only needed here if using starx (dont have a login manager)
 exec_always --no-startup-id xrdb ~/.Xresources
@@ -179,7 +196,11 @@ bindsym XF86AudioNext exec playerctl next
 bindsym XF86AudioPrev exec playerctl previous
 
 # remove title bar
-for_window [class=".*"] border pixel
+# for_window [class=".*"] border pixel
+
+# floating pop up automatically
+for_window [window_role="pop-up"] floating enable
+for_window [window_role="task_dialog"] floating enable
 
 # configure gaps between windows
 gaps inner 5
