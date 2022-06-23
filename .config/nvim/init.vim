@@ -9,6 +9,10 @@ set shiftwidth=2
 set autoindent
 set cindent
 
+" folding configurations
+set foldmethod=indent
+set foldlevel=99
+
 " prevent scrolling to the bottom of the screen
 set scrolloff=10
 
