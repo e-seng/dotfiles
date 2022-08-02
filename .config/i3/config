@@ -1,8 +1,8 @@
 # Set modifier key to alt
 # alt key
-set $mod Mod1
+set $sup Mod1
 # win key
-set $sup Mod4
+set $mod Mod4
 
 # Set display resolution
 exec_always --no-startup-id xrandr --output DP1-8 --mode 2560x1440 --rate 59.95
