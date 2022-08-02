@@ -59,7 +59,8 @@ fi
 # exec xterm -geometry 80x66+0+0 -name login
 
 # set background
-wal -i "$(< "${HOME}/.cache/wal/wal")" &
+# wal -i "$(< "${HOME}/.cache/wal/wal")" &
+wal -R
 # enable the compositor
 picom --config $HOME/.config/picom.conf --experimental-backends &
 # set monitor arragement
