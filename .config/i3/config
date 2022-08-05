@@ -174,15 +174,15 @@ client.background       $bg
 # Apply .Xresource. As far as I know, only needed here if using starx (dont have a login manager)
 exec_always --no-startup-id xrdb ~/.Xresources
 
-# Apply the last colorscheme generated without changing the background by using -n 
-exec_always --no-startup-id wal -R -n
+# Apply the last colorscheme generated
+exec_always --no-startup-id wal -R &
 
 # Apply a background different than the one used by wal
 # If this isn't needed, remove it and remove -n flag from the above command
-exec_always --no-startup-id feh --bg-fill ~/Pictures/Wal/bg1.jpg
+exec_always --no-startup-id feh --bg-fill ~/Pictures/Wal/bg1.jpg &
 
 # Execute polybar on launch. Script kills current ones on i3 refresh, otherwise they duplicate
-exec_always --no-startup-id $HOME/.config/polybar/launch.sh
+exec_always --no-startup-id $HOME/.config/polybar/launch.sh &
 
 # Pulse Audio controls
 bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5% #increase sound volume
