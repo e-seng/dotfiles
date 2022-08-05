@@ -1,8 +1,9 @@
 ! load every font needed
-*.font:\
+URxvt.font:\
   xft:Victor Mono:style=Regular:size=10, \
-  -*-Siji-*-*-*-*-*-*-*-*-*-*-*-*, \
-  -*-Unifont-*-*-*-*-*-*-*-*-*-*-*-*
+  9x15,xft:TerminessTTFNerdFontMono, \
+  xft:siji:size=12:style=Medium, \
+  xft:Icons:size=12
 
 ! xft:Cozette:style=Medium:size=10,\
 ! xft:Space Mono:style=Regular, \
