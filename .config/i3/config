@@ -175,14 +175,14 @@ client.background       $bg
 exec_always --no-startup-id xrdb ~/.Xresources
 
 # Apply the last colorscheme generated
-exec_always --no-startup-id wal -R &
+exec_always --no-startup-id wal -R
 
 # Apply a background different than the one used by wal
 # If this isn't needed, remove it and remove -n flag from the above command
-exec_always --no-startup-id feh --bg-fill ~/Pictures/Wal/bg1.jpg &
+exec_always --no-startup-id feh --bg-fill ~/Pictures/Wal/bg1.jpg
 
 # Execute polybar on launch. Script kills current ones on i3 refresh, otherwise they duplicate
-exec_always --no-startup-id $HOME/.config/polybar/launch.sh &
+exec_always --no-startup-id /home/petiole/.config/polybar/launch.sh
 
 # Pulse Audio controls
 bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5% #increase sound volume
