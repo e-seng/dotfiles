@@ -70,6 +70,8 @@ unclutter &
 # /usr/lib/lxpolkit/lxpolkit &
 # lock the screen when necessary
 light-locker &
+# listen for notifs
+dunst &
 # set screen brightness on boot
 echo 18000 > /sys/class/intel_backlight/brightness
 exec dbus-launch i3

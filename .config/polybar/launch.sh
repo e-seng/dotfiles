@@ -6,12 +6,12 @@ killall -q polybar
 # polybar-msg cmd quit
 
 # wait for all polybars to be killed
-while($(pgep polybar)); do
+while($(pgrep polybar)); do
   sleep 1;
 done;
 
 # Launch top bar
 echo "---" | tee -a /tmp/polybar_top.log
-polybar top 2>&1 | tee -a /tmp/polybar_top.log
+polybar top 2>&1 | tee /tmp/polybar_top.log &
 
 echo "Bars launched..."

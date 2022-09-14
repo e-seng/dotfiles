@@ -127,4 +127,6 @@ if test -d $NVM_HOME ; then
   [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 fi
 
+export PATH="$PATH:$HOME/.local/bin"
+
 export EDITOR=nvim
