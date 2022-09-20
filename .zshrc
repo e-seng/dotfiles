@@ -120,11 +120,11 @@ fi
 export WIN_HOME='/mnt/c/Users/ESeng'
 
 # set nvm stuff
-export NVM_HOME="$HOME/.nvm"
+export NVM_DIR="$HOME/.nvm"
 if test -d $NVM_HOME ; then
-  export PATH=${PATH}:${NVM_HOME}
-  source ${NVM_HOME}/nvm.sh
-  [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+  export PATH=${PATH}:${NVM_DIR}
+  [ -s "/usr/local/opt/nvm/nvm.sh" ] && \. "/usr/local/opt/nvm/nvm.sh"  # This loads nvm
+  [ -s "/usr/local/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/usr/local/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completionk
 fi
 
 export PATH="$PATH:$HOME/.local/bin"
