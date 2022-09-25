@@ -211,3 +211,9 @@ bindsym $mod+p move workspace to output left
 
 # Enable screenshot
 bindsym $sup+Shift+s exec flameshot gui
+
+# enable adjacent workspace jumping
+bindsym $mod+$sup+Right workspace next
+bindsym $mod+$sup+Left workspace prev
+bindsym $mod+$sup+l workspace next
+bindsym $mod+$sup+h workspace prev
