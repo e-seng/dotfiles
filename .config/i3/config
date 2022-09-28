@@ -182,7 +182,7 @@ exec_always --no-startup-id wal -R
 exec_always --no-startup-id feh --bg-fill ~/Pictures/Wal/bg1.jpg
 
 # Execute polybar on launch. Script kills current ones on i3 refresh, otherwise they duplicate
-exec_always --no-startup-id /home/petiole/.config/polybar/launch.sh
+exec_always --no-startup-id /home/petiole/.config/polybar/launch.sh &
 
 # Pulse Audio controls
 bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5% #increase sound volume
@@ -210,4 +210,10 @@ gaps outer 10
 bindsym $mod+p move workspace to output left
 
 # Enable screenshot
-bindsym $sup+Shift+s exec flameshot gui
+bindsym $mod+Shift+s exec flameshot gui
+
+# enable adjacent workspace jumping
+bindsym $mod+$sup+Right workspace next
+bindsym $mod+$sup+Left workspace prev
+bindsym $mod+$sup+l workspace next
+bindsym $mod+$sup+h workspace prev
