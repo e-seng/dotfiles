@@ -22,3 +22,6 @@ colorscheme ron
 
 " set netrw settings
 let g:netrw_liststyle = 3
+
+" set automatic newlines
+set tw=80 " hard 80 characters :)

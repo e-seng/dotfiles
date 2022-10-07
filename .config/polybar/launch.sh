@@ -10,6 +10,8 @@ while($(pgrep polybar)); do
   sleep 1;
 done;
 
+sleep 1;
+
 # Launch top bar
 echo "---" | tee -a /tmp/polybar_top.log
 polybar top 2>&1 | tee /tmp/polybar_top.log &
