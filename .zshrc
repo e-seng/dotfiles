@@ -130,3 +130,5 @@ fi
 export PATH="$PATH:$HOME/.local/bin"
 
 export EDITOR=nvim
+
+alias setenv='export $(cat .env | xargs)'
