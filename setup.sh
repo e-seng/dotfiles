@@ -37,6 +37,7 @@ echo -n "linking .config files... "
 ln -s ~/.dotfiles/.config/nvim ~/.config/
 echo "done"
 
+
 # ~~~ link base folders ~~~
 echo -n "linking other dot files into ~... "
 ln -s ~/.dotfiles/.dir_colors ~
