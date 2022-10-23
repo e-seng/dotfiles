@@ -18,7 +18,8 @@ set scrolloff=10
 
 " colors please
 syntax on
-colorscheme industry
+colorscheme habamax
+set termguicolors
 
 " set netrw settings
 let g:netrw_liststyle = 3

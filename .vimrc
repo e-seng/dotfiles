@@ -14,7 +14,8 @@ set scrolloff=10
 
 " colors please
 syntax on
-colorscheme ron
+" colorscheme default
+colorscheme koehler
 
 " set netrw settings
 let g:netrw_liststyle = 3
