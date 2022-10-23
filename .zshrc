@@ -132,3 +132,4 @@ export PATH="$PATH:$HOME/.local/bin"
 export EDITOR=nvim
 
 alias setenv='export $(cat .env | xargs)'
+alias user_mount="function _(){sudo mount -o uid=1000,gid=1000 --mkdir $1 /media/usb};"
