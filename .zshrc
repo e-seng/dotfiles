@@ -1,4 +1,4 @@
-# If you come from bash you might have to change your $PATH.
+
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
@@ -160,7 +160,7 @@ zstyle ':vcs_info:*' formats " %F{229}%f %F{244}(%f%F{248}%b%f%F{244})%f%F{24
 zstyle ':vcs_info:*' actionformats " %F{229}%f %F{244}(%f%F{248}%b|%a%f%F{244})%f%F{248}%m%u%c%f"
 
 # colours selected from colours displayed from `spectrum_ls`
-export PS1='%B%(?.%F{156}>%f.%F{202}>%f)%b %F{153}%2v %B%1~%b%f${vcs_info_msg_0_} ';
+export PS1='%t %B%(?.%F{156}>%f.%F{202}>%f)%b %F{153}%2v %B%1~%b%f${vcs_info_msg_0_} ';
 #               |                                 |     |      +- show git status
 #               |                                 |     +- show the current working directory
 #               |                                 +- set symbol showing which os is being used
