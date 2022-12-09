@@ -124,7 +124,7 @@ zsh-os-check() {
   if [[ -n "$(uname -r | grep arch)" ]]; then
     psvar[2]=' ' # Arch
   elif [[ -n "$(uname -s | grep Darwin)" ]]; then
-    psvar[2]='' # macos
+    psvar[2]='' # macos
   elif [[ -n "$(uname -s | grep Linux)" ]]; then
     psvar[2]='' # linux (Generic)
   else
