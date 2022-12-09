@@ -119,6 +119,54 @@ fi
 # set the home directory in windows
 export WIN_HOME='/mnt/c/Users/ESeng'
 
+# set zsh prompt
+zsh-os-check() {
+  if [[ -n "$(uname -r | grep arch)" ]]; then
+    psvar[2]=' ' # Arch
+  elif [[ -n "$(uname -s | grep Darwin)" ]]; then
+    psvar[2]='' # macos
+  elif [[ -n "$(uname -s | grep Linux)" ]]; then
+    psvar[2]='' # linux (Generic)
+  else
+    psvar[2]='' # windows
+  fi
+}
+
+## git stuff
+autoload -Uz vcs_info
+precmd() {
+  vcs_info
+  zsh-os-check
+}
+zstyle ':vcs_info:*' check-for-changes true
+zstyle ':vcs_info:*' use-simple false
+zstyle ':vcs_info:*' get-revision true
+zstyle ':vcs_info:git:*:-all-' command /usr/bin/git
+
+## check for untracked changes
+zstyle ':vcs_info:git*+set-message:*' hooks git-untracked
+
++vi-git-untracked() {
+  if [[ -n "$(git ls-files --others --exclude-standard)" ]]; then
+      hook_com[misc]=' ?'
+  else
+      hook_com[misc]=''
+  fi
+}
+
+zstyle ':vcs_info:*' unstagedstr ' *'
+zstyle ':vcs_info:*' stagedstr ' +'
+zstyle ':vcs_info:*' formats " %F{229}%f %F{244}(%f%F{248}%b%f%F{244})%f%F{248}%m%u%c%f"
+zstyle ':vcs_info:*' actionformats " %F{229}%f %F{244}(%f%F{248}%b|%a%f%F{244})%f%F{248}%m%u%c%f"
+
+# colours selected from colours displayed from `spectrum_ls`
+export PS1='%B%(?.%F{156}>%f.%F{202}>%f)%b %F{153}%2v %B%1~%b%f${vcs_info_msg_0_} ';
+#               |                                 |     |      +- show git status
+#               |                                 |     +- show the current working directory
+#               |                                 +- set symbol showing which os is being used
+#               +- show '>' prompt, coloured based off previous cmd's success/fail. (?.success_str.fail_str)
+# reference: https://zsh.sourceforge.io/Doc/Release/Prompt-Expansion.html
+
 # set nvm stuff
 export NVM_DIR="$HOME/.nvm"
 if test -d $NVM_DIR ; then
