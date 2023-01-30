@@ -24,7 +24,7 @@ bindsym $mod+Shift+q kill
 # alternatively, use $sup+Spaace
 # bindsym $sup+space exec dmenu_run -fn 'Overpass Mono:pixelsize=15' -l 3 -nf '#707880' -sf '#cc6666' -nb '#1d1f21' -sb '#1d1f21'
 # bindsym $sup+space exec dmenu_run -c -d 0.3 -l 1 -p "✨" -fn 'Cozette-15'
-bindsym $sup+space exec dmenu -c -d 0.3 -l 3 -p "✨" -fn 'Cozette-15' < ~/.config/i3/menu | sh
+bindsym $sup+space exec (cat ~/.config/i3/menu && compgen -c) | dmenu -c -d 0.3 -l 5 -p "✨" -fn 'Cozette-15' | sh
 # using: https://github.com/RyanMcG/dmenu
 
 # Change focus
