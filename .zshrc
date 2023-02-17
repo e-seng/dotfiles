@@ -121,7 +121,9 @@ export WIN_HOME='/mnt/c/Users/ESeng'
 
 # set zsh prompt
 zsh-os-check() {
-  if [[ -n "$(uname -r | grep arch)" ]]; then
+  if [[ -n psvar[2] ]]; then
+    return
+  elif [[ -n "$(uname -r | grep arch)" ]]; then
     psvar[2]=' ' # Arch
   elif [[ -n "$(uname -s | grep Darwin)" ]]; then
     psvar[2]='' # macos
