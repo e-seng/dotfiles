@@ -119,18 +119,21 @@ fi
 # set the home directory in windows
 export WIN_HOME='/mnt/c/Users/ESeng'
 
+# custom prompt here:
+# psvar[2]='banana'
+
 # set zsh prompt
 zsh-os-check() {
-  if [[ -n psvar[2] ]]; then
+  if [[ -n "$psvar[2]" ]]; then
     return
   elif [[ -n "$(uname -r | grep arch)" ]]; then
-    psvar[2]=' ' # Arch
+    psvar[2]='[arch]' # Arch
   elif [[ -n "$(uname -s | grep Darwin)" ]]; then
-    psvar[2]='' # macos
+    psvar[2]='[macos]' # macos
   elif [[ -n "$(uname -s | grep Linux)" ]]; then
-    psvar[2]='' # linux (Generic)
+    psvar[2]='[*unix]' # linux (Generic)
   else
-    psvar[2]='' # windows
+    psvar[2]='[windows]' # windows
   fi
 }
 
