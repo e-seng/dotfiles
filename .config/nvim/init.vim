@@ -25,7 +25,7 @@ set termguicolors
 let g:netrw_liststyle = 3
 
 " set automatic newlines
-set tw=80 " hard 80 characters :)
+set tw=120 " ~~hard 80 characters :)~~ nah, 120
 
 " set snippet keybindings
 nnoremap ,html :-1read $HOME/.config/nvim/snippets/skeleton.html<CR>3j3wl
