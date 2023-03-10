@@ -171,7 +171,8 @@ zstyle ':vcs_info:*' actionformats " %F{229}%f %F{244}(%f%F{248}%b|%a%f%F{244
 # #               |                                 +- set symbol showing which os is being used
 # #               +- show '>' prompt, coloured based off previous cmd's success/fail. (?.success_str.fail_str)
 # # reference: https://zsh.sourceforge.io/Doc/Release/Prompt-Expansion.html
-export PS1='%F{11}%t%f %F{6}@%m:%f%B%1~/%b %(#,%B%F{14}#%f%b,%F{6}$%f)${vcs_info_msg_0_} ';
+export PS1='%F{11}%t%f %F{6}@%m:%f%B%1~/%b %(#,%B%F{14}#%f%b,%F{6}$%f)${vcs_info_msg_0_} %(?,,%F{1}[%?]%f )';
+#           |          |                   |                          |                  +- show previous command exit status
 #           |          |                   |                          +- show git status
 #           |          |                   +- show who is logged in (# for root, $ for user)
 #           |          +- show machine name and working directory @{host}:{dir}/
