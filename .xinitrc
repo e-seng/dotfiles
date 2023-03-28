@@ -73,7 +73,7 @@ light-locker &
 # listen for notifs
 dunst &
 # set touchpad button map
-xinput set `xinput | grep -iF 'touchpad' | cut -d'=' -f2 | cut -f1` 1 1 3 &
+xinput set-button-map `xinput | grep -iF 'touchpad' | cut -d'=' -f2 | cut -f1` 1 1 3 &
 # set screen brightness on boot
 echo 18000 > /sys/class/intel_backlight/brightness
 exec dbus-launch i3
