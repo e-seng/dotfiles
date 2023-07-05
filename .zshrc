@@ -189,7 +189,9 @@ fi
 export PATH="$PATH:$HOME/.local/bin"
 
 export EDITOR=nvim
+export BROWSER=firefox
 
 alias setenv='export $(cat .env | xargs)'
 alias user_mount="function _(){sudo mount -o uid=1000,gid=1000 --mkdir $1 /media/usb};"
 alias noaslr="setarch `uname -m` -R /bin/bash"
+alias dd="sudo dd status=progress"
