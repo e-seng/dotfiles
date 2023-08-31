@@ -1,0 +1,23 @@
+CC = gcc
+binaries = binary1 binary2
+# shared = shared_obj1 shared_obj2
+build_path = ./build
+
+main: clean $(shared) $(binaries)
+
+all: $(shared) $(binaries)
+
+$(binaries): %:%.c
+	$(CC) -o $(build_path)/$@ $< -L$(build_path) # -l$(shared)
+
+# $(shared): %:%.c
+# 	$(CC) -o $(build_path)/$@.o $< -fpic -c
+# 	$(CC) -o $(build_path)/lib$@.so $< --shared -fpic
+# 	rm $(build_path)/*.o
+
+clean:
+	rm -rf $(build_path)/*
+
+# shared: $(shared)
+
+binaries: $(binaries)
