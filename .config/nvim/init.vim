@@ -29,3 +29,4 @@ set tw=80
 
 " set snippet keybindings
 nnoremap ,html :-1read $HOME/.config/nvim/snippets/skeleton.html<CR>3j3wl
+nnoremap ,make :-1read /Users/petiole/.config/nvim/snippets/makefile.snippet<CR>j2wv2e
