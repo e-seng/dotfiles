@@ -186,6 +186,14 @@ exec_always --no-startup-id wal -R
 # If this isn't needed, remove it and remove -n flag from the above command
 exec_always --no-startup-id feh --bg-fill ~/Pictures/Wal/bg1.jpg
 
+# Apply a video background! (using xwinwrap and mpv)
+# ## kill all previous background video players if a soft reset was performed
+# exec_always --no-startup-id killall mpv
+# exec_always --no-startup-id xwinwrap -ni -fs -b -nf -un -o 1.0 -- mpv -wid 0x55a --loop --no-audio ~/Documents/images/backgrounds/waneella-ramen-ambience.mp4
+# #                                                                                                  ^ this is the video file itself
+# ## kill off any child windows that would be processing the background video
+# for_window [class="^$"] kill
+
 # Execute polybar on launch. Script kills current ones on i3 refresh, otherwise they duplicate
 exec_always --no-startup-id /home/petiole/.config/polybar/launch.sh &
 
