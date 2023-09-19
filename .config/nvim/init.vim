@@ -9,8 +9,8 @@ set shiftwidth=2
 set autoindent
 set cindent
 " show nesting depth
+set listchars=leadmultispace:\|\ \:\ \|\ \ \ 
 set list
-set listchars=leadmultispace:\ \ \:\ \ \.
 
 " folding configurations
 set foldmethod=indent
