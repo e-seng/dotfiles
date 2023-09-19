@@ -8,6 +8,9 @@ set tabstop=2
 set shiftwidth=2
 set autoindent
 set cindent
+" show nesting depth
+set list
+set listchars=leadmultispace:\ \ \:\ \ \.
 
 " folding configurations
 set foldmethod=indent
@@ -29,4 +32,4 @@ set tw=80
 
 " set snippet keybindings
 nnoremap ,html :-1read $HOME/.config/nvim/snippets/skeleton.html<CR>3j3wl
-nnoremap ,make :-1read /Users/petiole/.config/nvim/snippets/makefile.snippet<CR>j2wv2e
+nnoremap ,make :-1read $HOME/.config/nvim/snippets/makefile.snippet<CR>j2wv2e
