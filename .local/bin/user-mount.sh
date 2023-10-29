@@ -10,12 +10,14 @@ fi
 
 sudo -v
 
+dev_name=`rev | cut -d'/' -f1 | rev`
+
 if [ $? -ne 0 ]; then
   echo "missing permissions"
   exit 1
 fi
 
-sudo mount $1 -o uid=1000,gid=1000 --mkdir /media/usb
+sudo mount $1 -o uid=1000,gid=1000 --mkdir /media/${dev_name}
 
 if [ $? -ne 0 ]; then
   echo "failed to mount"
