@@ -37,6 +37,7 @@ nnoremap ,writeup :-1read /home/petiole/.config/nvim/snippets/writeup_skeleton.m
 
 " fuzz through child directories for easier file access
 set path+=**
+set wildmenu
 
 " integrate with ctags to allow for multi-file function definition
 " requires ctags
