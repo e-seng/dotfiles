@@ -9,7 +9,7 @@ set shiftwidth=2
 set smartindent
 set smarttab
 " show nesting depth
-set listchars=leadmultispace:\|\ \:\ \|\ \ \ 
+set lcs=tab:>-,multispace:\|\ \:\ \|\ \ \
 set list
 
 " folding configurations
@@ -21,7 +21,7 @@ set scrolloff=10
 
 " colors please
 syntax on
-colorscheme habamax
+colorscheme lunaperche
 set termguicolors
 
 " set netrw settings
