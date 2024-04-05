@@ -9,7 +9,7 @@ set shiftwidth=2
 set smartindent
 set smarttab
 " show nesting depth
-set lcs=tab:>-,multispace:\|\ \:\ \|\ \ \
+set lcs=tab:>-,multispace:\|\ \:\ \|\ \ \ 
 set list
 
 " folding configurations
