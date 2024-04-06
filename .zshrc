@@ -138,7 +138,7 @@ zsh-os-check() {
 }
 
 ## git stuff
-autoload -Uz vcs_info
+autoload -Uz add-zsh-hook vcs_info
 precmd() {
   vcs_info
   zsh-os-check
@@ -164,6 +164,8 @@ zstyle ':vcs_info:*' stagedstr ' +'
 zstyle ':vcs_info:*' formats " %F{229}%f %F{244}(%f%F{248}%b%f%F{244})%f%F{248}%m%u%c%f"
 zstyle ':vcs_info:*' actionformats " %F{229}%f %F{244}(%f%F{248}%b|%a%f%F{244})%f%F{248}%m%u%c%f"
 
+add-zsh-hook precmd vcs_info
+
 # colours selected from colours displayed from `spectrum_ls`
 # export PS1='%t %B%(?.%F{156}>%f.%F{202}>%f)%b %F{153}%2v %B%1~%b%f${vcs_info_msg_0_} ';
 # #               |                                 |     |      +- show git status
@@ -171,10 +173,20 @@ zstyle ':vcs_info:*' actionformats " %F{229}%f %F{244}(%f%F{248}%b|%a%f%F{244
 # #               |                                 +- set symbol showing which os is being used
 # #               +- show '>' prompt, coloured based off previous cmd's success/fail. (?.success_str.fail_str)
 # # reference: https://zsh.sourceforge.io/Doc/Release/Prompt-Expansion.html
-export PS1='%F{11}%t%f %F{6}@%m:%f%B%1~/%b %(#,%B%F{14}#%f%b,%F{6}$%f)${vcs_info_msg_0_} %(?,,%F{1}[%?]%f )';
-#           |          |                   |                          |                  +- show previous command exit status
-#           |          |                   |                          +- show git status
-#           |          |                   +- show who is logged in (# for root, $ for user)
+
+# export PS1='%F{11}%t%f %F{6}@%m:%f%B%1~/%b %(#,%B%F{14}#%f%b,%F{6}$%f)${vcs_info_msg_0_} %(?,,%F{1}[%?]%f )';
+# #           |          |                   |                          |                  +- show previous command exit status
+# #           |          |                   |                          +- show git status
+# #           |          |                   +- show who is logged in (# for root, $ for user)
+# #           |          +- show machine name and working directory @{host}:{dir}/
+# #           +- show time
+
+# newline prompt
+NEWLINE=$'\n'
+export PS1='%F{11}%T%f %F{6}@%m:%f%B%1~/%b${vcs_info_msg_0_} %(?,,%F{1}[%?]%f )${NEWLINE}%(#,%B%F{14}#%f%b,%F{6}$%f) '
+#           |          |                  |                  |                           +- show who is logged in (# for root, $ for user)
+#           |          |                  |                  +- show previous command exit status
+#           |          |                  +- show git status
 #           |          +- show machine name and working directory @{host}:{dir}/
 #           +- show time
 
