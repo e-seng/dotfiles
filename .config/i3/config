@@ -25,7 +25,8 @@ bindsym $mod+Shift+q kill
 # bindsym $sup+space exec dmenu_run -fn 'Overpass Mono:pixelsize=15' -l 3 -nf '#707880' -sf '#cc6666' -nb '#1d1f21' -sb '#1d1f21'
 # bindsym $sup+space exec dmenu_run -l 5 -p "✨" -fn 'Cozette-15'
 # using: https://github.com/RyanMcG/dmenu
-bindsym $sup+space exec dmenu_run -c -d 0.3 -l 5 -p "✨" -fn 'Cozette-15'
+# bindsym $sup+space exec dmenu_run -c -d 0.3 -l 5 -p "✨" -fn 'Cozette-15'
+bindsym $sup+space exec rofi -show drun
 # bindsym $sup+space exec (cat ~/.config/i3/menu && compgen -c) | dmenu -c -d 0.3 -l 5 -p "✨" -fn 'Cozette-15' | sh
 
 # Change focus
