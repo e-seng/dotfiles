@@ -12,6 +12,9 @@ font pango:Overpass Regular 8
 # Press mod key to be able to resize floating windows
 floating_modifier $mod
 
+# lock the screen
+bindsym $sup+Control+q exec dm-tool lock
+
 # Open new terminal
 # bindsym $mod+Return exec i3-sensible-terminal
 bindsym $mod+Return exec kitty
