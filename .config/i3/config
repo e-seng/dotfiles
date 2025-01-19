@@ -1,11 +1,12 @@
 # Set modifier key to alt
 # win key
 set $sup Mod4
-# alt key
-set $mod Mod1
+# left alt key
+set $mod Mod3
 
 # Set display resolution
 exec_always --no-startup-id xrandr --output DP1-8 --mode 2560x1440 --rate 59.95
+exec_always --no-startup-id xmodmap ~/.Xmodmap
 
 font pango:Overpass Regular 8
 
