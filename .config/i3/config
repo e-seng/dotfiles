@@ -1,8 +1,8 @@
 # Set modifier key to alt
-# alt key
-set $sup Mod1
 # win key
-set $mod Mod4
+set $sup Mod4
+# alt key
+set $mod Mod1
 
 # Set display resolution
 exec_always --no-startup-id xrandr --output DP1-8 --mode 2560x1440 --rate 59.95
@@ -13,7 +13,7 @@ font pango:Overpass Regular 8
 floating_modifier $mod
 
 # lock the screen
-bindsym $sup+Control+q exec dm-tool lock
+bindsym $mod+Control+q exec dm-tool lock
 
 # Open new terminal
 # bindsym $mod+Return exec i3-sensible-terminal
@@ -29,7 +29,7 @@ bindsym $mod+Shift+q kill
 # bindsym $sup+space exec dmenu_run -l 5 -p "✨" -fn 'Cozette-15'
 # using: https://github.com/RyanMcG/dmenu
 # bindsym $sup+space exec dmenu_run -c -d 0.3 -l 5 -p "✨" -fn 'Cozette-15'
-bindsym $sup+space exec rofi -show drun
+bindsym $mod+space exec rofi -show drun
 # bindsym $sup+space exec (cat ~/.config/i3/menu && compgen -c) | dmenu -c -d 0.3 -l 5 -p "✨" -fn 'Cozette-15' | sh
 
 # Change focus
@@ -74,7 +74,7 @@ bindsym $mod+e layout toggle split
 bindsym $mod+Shift+space floating toggle
 
 # Change focus between tiling / floating windows
-bindsym $mod+space focus mode_toggle
+# bindsym $mod+space focus mode_toggle
 
 # Focus the parent container
 bindsym $mod+a focus parent
@@ -240,7 +240,7 @@ bindsym $mod+p move workspace to output left
 bindsym $mod+o move workspace to output up
 
 # Enable screenshot
-bindsym $mod+Shift+s exec flameshot gui
+bindsym $sup+Shift+s exec flameshot gui
 
 # enable adjacent workspace jumping
 bindsym $mod+$sup+Right workspace next
