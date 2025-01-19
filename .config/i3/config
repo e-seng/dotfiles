@@ -6,6 +6,9 @@ set $mod Mod3
 
 # Set display resolution
 exec_always --no-startup-id xrandr --output DP1-8 --mode 2560x1440 --rate 59.95
+
+# bind left alt differently to right alt
+# mod the value here using `xmodmap -pk | grep Alt_L | awk '{print $1}'`
 exec_always --no-startup-id xmodmap ~/.Xmodmap
 
 font pango:Overpass Regular 8
