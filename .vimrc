@@ -21,7 +21,7 @@ set scrolloff=10
 
 " colors please
 syntax on
-colorscheme lunaperche
+colorscheme sorbet
 set termguicolors
 
 " set netrw settings
