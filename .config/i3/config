@@ -2,7 +2,7 @@
 # win key
 set $sup Mod4
 # left alt key
-set $mod Mod3
+set $mod Mod1
 
 # Set display resolution
 exec_always --no-startup-id xrandr --output DP1-8 --mode 2560x1440 --rate 59.95
@@ -43,10 +43,10 @@ bindsym $mod+k focus up
 bindsym $mod+l focus right
 
 # Alternatively, you can use the cursor keys:
-bindsym $mod+Left focus left
-bindsym $mod+Down focus down
-bindsym $mod+Up focus up
-bindsym $mod+Right focus right
+# bindsym $mod+Left focus left
+# bindsym $mod+Down focus down
+# bindsym $mod+Up focus up
+# bindsym $mod+Right focus right
 
 # Move focused window
 # bindsym $mod+Shift+j move left
@@ -227,6 +227,8 @@ bindsym XF86AudioPrev exec playerctl previous
 # uses brightnessctl
 bindsym XF86MonBrightnessUp exec brightnessctl s +5%
 bindsym XF86MonBrightnessDown exec brightnessctl s 5%-
+bindsym $mod+XF86MonBrightnessUp exec brightnessctl s +1%
+bindsym $mod+XF86MonBrightnessDown exec brightnessctl s 1%-
 
 # remove title bar
 # for_window [class=".*"] border pixel
